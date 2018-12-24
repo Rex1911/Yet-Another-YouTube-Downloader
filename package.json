@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build && cd .. && cd server && npm install",
     "start": "cd server && node app.js"
   },
   "author": "Aryan Likhite",
