@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 //       INITIAL SETUP
 //==============================
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 //==============================
 
 app.get("/" , (req,res) => {
@@ -24,13 +25,6 @@ app.post("/api/getinfo", (req,res) => {
             res.json(info);
         }
     })
-});
-
-app.post("/api/download", (req,res) => {
-    let format = req.body.format;
-    let link = req.body.videoUrl;
-    let stream = ytdl(link,format);
-    stream.pipe(res);
 });
 
 app.listen("3001" , () => {

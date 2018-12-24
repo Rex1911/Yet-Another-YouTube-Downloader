@@ -1,6 +1,4 @@
 body {
-  margin: 0;
-  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,6 +20,7 @@ body {
 
 #search-button {
   padding: 15px 20px;
+  margin-top:5px;
 }
 
 #card-action {
