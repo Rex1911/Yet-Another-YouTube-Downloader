@@ -20,7 +20,6 @@ class App extends Component {
 
   handleChange = event => {
     this.setState({value: event.target.value });
-    console.log("Onchange called");
   };
 
   handleSearch = event => {
@@ -39,8 +38,7 @@ class App extends Component {
     .then(response => {
       if(response.err) {
         this.setState({showResult: 3})
-      } else {
-        console.log(response);
+      } else {;
         this.setState({
           title: response.title,
           author: response.author.name,

@@ -7,12 +7,13 @@ const bodyParser = require('body-parser')
 //==============================
 //       INITIAL SETUP
 //==============================
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 //==============================
 
 app.get("/" , (req,res) => {
-    
+    res.sendFile(path.join(__dirname, "../client/build/index.html"))
 });
 
 app.post("/api/getinfo", (req,res) => {
@@ -28,5 +29,5 @@ app.post("/api/getinfo", (req,res) => {
 });
 
 app.listen("5000" , () => {
-    console.log("Server started at port 3001");
+    console.log("Server started at port 5000");
 });
