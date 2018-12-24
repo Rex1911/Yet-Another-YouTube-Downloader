@@ -27,6 +27,6 @@ app.post("/api/getinfo", (req,res) => {
     })
 });
 
-app.listen("3001" , () => {
+app.listen("5000" , () => {
     console.log("Server started at port 3001");
 });
